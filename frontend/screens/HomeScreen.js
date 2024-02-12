@@ -8,11 +8,15 @@ import Profile from "./Profile";
 import { AntDesign } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { gestureHandlerRootHOC } from "react-native-gesture-handler";
+
 
 const Tab = createBottomTabNavigator();
 
 const HomeScreen = () => {
   return (
+    
+
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
@@ -23,19 +27,19 @@ const HomeScreen = () => {
           
         },
       }}
-    >
+      >
       <Tab.Screen
         name="Main"
-        component={Main}
+        component={gestureHandlerRootHOC(Main)}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
               <View>
                 {focused ? (
                   <Ionicons name="home-sharp" size={26} color="black" />
-                ) : (
+                  ) : (
                   <Ionicons name="home-outline" size={26} color="black" />
-                )}
+                  )}
               </View>
             );
           },
@@ -43,16 +47,16 @@ const HomeScreen = () => {
       />
       <Tab.Screen
         name="Shop"
-        component={Shop}
+        component={gestureHandlerRootHOC(Shop)}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
               <View>
                 {focused ? (
                   <Ionicons name="wallet" size={26} color="black" />
-                ) : (
-                  <Ionicons name="wallet-outline" size={26} color="black" />
-                )}
+                  ) : (
+                    <Ionicons name="wallet-outline" size={26} color="black" />
+                    )}
               </View>
             );
           },
@@ -60,56 +64,59 @@ const HomeScreen = () => {
       />
       <Tab.Screen
         name="Add"
-        component={Add}
+        component={gestureHandlerRootHOC(Add)}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
               <View>
                 {focused ? (
                   <AntDesign name="plussquare" size={26} color="black" />
-                ) : (
-                  <AntDesign name="plussquareo" size={26} color="black" />
-                )}
+                  ) : (
+                    <AntDesign name="plussquareo" size={26} color="black" />
+                    )}
               </View>
             );
           },
         }}
-      />
+        />
+      
       <Tab.Screen
         name="Setting"
-        component={Setting}
+        component={gestureHandlerRootHOC(Setting)}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
               <View>
                 {focused ? (
                   <Ionicons name="settings" size={26} color="black" />
-                ) : (
-                  <Ionicons name="settings-outline" size={26} color="black" />
-                )}
+                  ) : (
+                    <Ionicons name="settings-outline" size={26} color="black" />
+                    )}
               </View>
             );
           },
         }}
-      />
+        />
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={gestureHandlerRootHOC(Profile)}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
               <View>
                 {focused ? (
                   <FontAwesome5 name="user-alt" size={26} color="black" />
-                ) : (
-                  <FontAwesome5 name="user" size={26} color="black" />
-                )}
+                  ) : (
+                    <FontAwesome5 name="user" size={26} color="black" />
+                    )}
               </View>
             );
           },
         }}
-      />
+        />
+      
     </Tab.Navigator>
+        
   );
 };
 

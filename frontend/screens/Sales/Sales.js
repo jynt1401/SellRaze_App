@@ -27,7 +27,7 @@ const Sales = () => {
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <View className="w-full  min-h-screen">
         <ScrollView>
-          <View className="flex flex-row justify-between bg-[#eaeaeb] rounded-3xl p-1 w-[60%] ml-5">
+          <View className="flex flex-row justify-between bg-[#f8f8f8] rounded-3xl p-1 w-[60%] ml-5">
             <Pressable
               onPress={onPressTotalSales}
               className={`rounded-2xl p-1  mx-1 flex  items-center ${selectTSale? 'bg-[#2e2e2e] rounded-3xl' : ''}`}

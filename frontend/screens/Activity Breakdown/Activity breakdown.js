@@ -4,7 +4,7 @@ import { Button, Pressable, Text, View } from "react-native";
 import Hour from "./Hour";
 import Lifetime from "./Lifetime";
 import Monthly from "./Monthly";
-import Weekly from "./Weekly";
+import Weekly from "./Weekly/Weekly";
 const ActivityBreakdown = () => {
   const [timeline, settimeline] = useState("Weekly");
   const [Componemt, setComponemt] = useState();
@@ -34,7 +34,7 @@ const ActivityBreakdown = () => {
 
   return (
     <View style={{}}>
-      <Text className="mt-7 ml-7 font-bold text-lg">Activity breakdown </Text>
+      <Text className="mt-7 ml-7  text-lg">Activity breakdown </Text>
       <View className="flex flex-row justify-between  rounded-3xl p-1  mx-5 mt-2 w-[80%]  ">
         <Pressable
           id="Hour"
@@ -42,7 +42,7 @@ const ActivityBreakdown = () => {
             settimeline("Hour");
           }}
           className={`rounded-2xl p-1  mx-1 flex  items-center px-2 ${
-            timeline === "Hour" ? "bg-[#BAEEFE]" : "bg-[#F2F2F2]"
+            timeline === "Hour" ? "bg-[#BAEEFE]" : "bg-[#f8f8f8]"
           } `}
         >
           <Text
@@ -58,15 +58,15 @@ const ActivityBreakdown = () => {
             settimeline("Weekly");
           }}
           className={`rounded-2xl p-1  mx-1 flex  items-center  ${
-            timeline === "Weekly" ? "bg-[#BAEEFE]" : "bg-[#F2F2F2]"
+            timeline === "Weekly" ? "bg-[#BAEEFE]" : "bg-[#f8f8f8]"
           } `}
         >
           <Text
-            className={` font-medium p-1 text-[10px] ${
+            className={` font-medium py-1 px-3 text-[10px] ${
               timeline === "Weekly" ? "text-[#076AFF]" : ""
             } `}
           >
-            Weekly
+            Week
           </Text>
         </Pressable>
         <Pressable
@@ -74,15 +74,15 @@ const ActivityBreakdown = () => {
             settimeline("Monthly");
           }}
           className={`rounded-2xl p-1  mx-1 flex  items-center  ${
-            timeline === "Monthly" ? "bg-[#BAEEFE]" : "bg-[#F2F2F2]"
+            timeline === "Monthly" ? "bg-[#BAEEFE]" : "bg-[#f8f8f8]"
           }`}
         >
           <Text
-            className={` font-medium p-1 text-[10px] ${
+            className={` font-medium py-1 px-3 text-[10px] ${
               timeline === "Monthly" ? "text-[#076AFF]" : ""
             } `}
           >
-            Monthly
+            Month
           </Text>
         </Pressable>
         <Pressable
@@ -90,11 +90,11 @@ const ActivityBreakdown = () => {
             settimeline("Lifetime");
           }}
           className={`rounded-2xl p-1  mx-1 flex  items-center ${
-            timeline === "Lifetime" ? "bg-[#BAEEFE]" : "bg-[#F2F2F2]"
+            timeline === "Lifetime" ? "bg-[#BAEEFE]" : "bg-[#f8f8f8]"
           } `}
         >
           <Text
-            className={` font-medium p-1 text-[10px] ${
+            className={` font-medium py-1 px-3 text-[10px] ${
               timeline === "Lifetime" ? "text-[#076AFF]" : ""
             } `}
           >
@@ -102,7 +102,7 @@ const ActivityBreakdown = () => {
           </Text>
         </Pressable>
       </View>
-      <View className="w-[80%] mx-auto mt-5">
+      <View className="w-[90%] mx-auto mt-5">
         {TimelineComponent.map((value, key) => {
           return (
             <View>{value.id === timeline ? <>{value.type}</> : <></>}</View>
