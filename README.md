@@ -6,7 +6,7 @@
 1. Clone the repository:
 
    ```bash
-   https://github.com/jynt1401/SellRaze_App.git
+   git clone https://github.com/jynt1401/SellRaze_App.git
 
 2. Run Client:
 
@@ -22,7 +22,11 @@
 ## Walkthrough
 
 
-https://github.com/jynt1401/SellRaze_App/assets/100084399/8b4b3d0b-e7bd-49a5-ba84-ca9d0f1befcf
+
+
+
+
+https://github.com/jynt1401/SellRaze_App/assets/100084399/d2558652-601d-4fec-99ff-a961dd0bceda
 
 
 
