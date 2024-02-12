@@ -6,7 +6,7 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/jynt1401/SellRaze_App.git
+   https://github.com/jynt1401/SellRaze_App.git
 
 2. Run Client:
 
