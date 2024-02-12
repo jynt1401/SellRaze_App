@@ -14,8 +14,7 @@
    cd frontend
    npx expo strt
 
-3. Run Server:
-   scan QR Code from Expo App 
+ Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
 
 <br>
 <br>
